@@ -2,15 +2,15 @@
 <?php
 
 $usuario_correcto = "admin";
-$contraseña_correcta "#elChup4c4br4S";
+$contraseña_correcta = "#elChup4c4br4S";
 
 $usuario = $_POST["usuario"] ?? "";
 $contraseña = $_POST["contraseña"] ?? "":
 
 if($usuario_correcto == $usuario && $contraseña_correcta == $contraseña){
-    header("Location: index_en.php");
+    header("Location: index_es.php");
 } else {
-    echo="The password or the usuary are incorrect"
+    echo="La contraseña o el usuario introducidos son incorrectos"
 }
 
 // 2. INICIALIZAR EL CONTADOR DE FALLOS EN SESIÓN
@@ -59,23 +59,35 @@ if (isset($_POST['enviar'])) {
 
 
 <html>
-    <h1>Log in</h1>
+    <DOCTYPE html5>
+    <h1>Se connecter</h1>
 
     <form method="POST">
-    <p>User</p>
-    <input type="text" name="nombre">
-    <p>Password</p>
-    <input type="password" name="contraseña">
+    <p>Utilisateur</p>
+    <input type="text" name="utilisateur">
+    <p>Mot de passe</p>
+    <input type="password" name="mot de passe">
     <br>
     <label>Sexo:</label>
         <select>
-            <option value="" disabled selected>Yes please</option>
-            <option value="hombre">Man</option>
-            <option value="mujer">Woman</option>
-            <option value="hac">Apache combat helicopter</option>
+            <option value="" disabled selected>Oui s'il vous plait</option>
+            <option value="hombre">Homme</option>
+            <option value="mujer">Femmes</option>
+            <option value="hac">Hélicoptère de combat Apache</option>
         </select>
-    <input type="submit" value="Log In" name="enviar">
+    <input type="submit" value="Envoyer" name="envoyer">
     </form>
+    <br>
+    <a href="index.php" name="es">
+    <img src="bandera españa.jpg" alt="bandera españa">
+    </a>
+    <br>
+    <a href="index_en.php" name="en">
+    <img src="bandera inglaterra.png" alt="bandera inglaterra">
+    </a>
+    <a href="index_fr.php" name="fr">
+    <img src="francia.png" alt="bandera francia">
+    </a>
     <br>
     <?php if ($error_mensaje): ?>
         <p style="color: red;"><?= $error_mensaje ?></p>

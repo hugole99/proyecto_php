@@ -59,6 +59,7 @@ if (isset($_POST['enviar'])) {
 
 
 <html>
+
     <h1>Inicie sesión</h1>
 
     <form method="POST">
@@ -67,6 +68,13 @@ if (isset($_POST['enviar'])) {
     <p>Contraseña</p>
     <input type="password" name="contraseña">
     <br>
+    <label>Sexo:</label>
+        <select>
+            <option value="" disabled selected>Si por favor</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="hac">Helicoptero Apache de combate</option>
+        </select>
     <input type="submit" value="Enviar" name="enviar">
     </form>
     <br>
@@ -76,6 +84,9 @@ if (isset($_POST['enviar'])) {
     <br>
     <a href="index_en.php" name="en">
     <img src="bandera inglaterra.png" alt="bandera inglaterra">
+    </a>
+    <a href="index_fr.php" name="fr">
+    <img src="francia.png" alt="bandera francia">
     </a>
     <br>
     <?php if ($error_mensaje): ?>
